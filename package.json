@@ -1,0 +1,56 @@
+{
+  "name": "socketcluster-sample",
+  "description": "A sample SocketCluster app",
+  "version": "1.0.0",
+  "contributors": [
+    {
+      "name": "Anurag Vohra",
+      "email": "anuragvohraec@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "connect": "^3.6.6",
+    "eetase": "^4.0.0",
+    "express": "^4.16.3",
+    "install": "^0.13.0",
+    "morgan": "^1.7.0",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.7",
+    "npm": "^7.17.0",
+    "sc-errors": "^2.0.1",
+    "scc-broker-client": "^8.0.0",
+    "serve-static": "^1.13.2",
+    "socketcluster-client": "^16.0.3",
+    "socketcluster-server": "^16.0.2",
+    "uuid": "^3.3.2"
+  },
+  "keywords": [
+    "websocket",
+    "server",
+    "realtime",
+    "cluster",
+    "scalable"
+  ],
+  "readmeFilename": "README.md",
+  "scripts": {
+    "prepare": "rm -rf dist & tsc",
+    "dev": "APP_ENV=DEV COUCHDB_USERNAME=admin COUCHDB_PASSWORD=password COUCHDB_URL=http://localhost:5984 SOCKETCLUSTER_PORT=3030 npx ts-node-dev src/server.ts",
+    "start": "node dist/server.js",
+    "start:watch": "./node_modules/nodemon/bin/nodemon.js server.js",
+    "start:docker": "./node_modules/nodemon/bin/nodemon.js /usr/src/app/dist/server.js"
+  },
+  "devDependencies": {
+    "@types/eetase": "^4.0.1",
+    "@types/express": "^4.17.13",
+    "@types/memory-cache": "^0.2.1",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^16.4.0",
+    "@types/node-fetch": "^2.5.12",
+    "@types/scc-broker-client": "^7.0.3",
+    "@types/socketcluster-server": "^15.0.3",
+    "@types/uuid": "^8.3.1",
+    "ts-lint": "^4.5.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  }
+}
